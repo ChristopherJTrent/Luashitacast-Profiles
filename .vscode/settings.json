@@ -1,0 +1,22 @@
+{
+    "Lua.diagnostics.globals": [
+        "T",
+        "gFunc",
+        "gData",
+        "chat",
+        "AshitaCore",
+        "ashita",
+        "bit",
+        "ImGuiWindowFlags_NoDecoration",
+        "ImGuiWindowFlags_AlwaysAutoResize",
+        "ImGuiWindowFlags_NoSavedSettings",
+        "ImGuiWindowFlags_NoFocusOnAppearing",
+        "ImGuiWindowFlags_NoNav",
+        "ImGuiCond_Always",
+        "FLT_MAX",
+        "gProfile"
+    ],
+    "Lua.diagnostics.disable": [
+        "undefined-global"
+    ]
+}
