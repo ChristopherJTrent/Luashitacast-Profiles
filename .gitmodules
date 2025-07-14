@@ -1,0 +1,3 @@
+[submodule "Smart.LAC"]
+	path = Smart.LAC
+	url = git@github.com:ChristopherJTrent/Smart.LAC.git
