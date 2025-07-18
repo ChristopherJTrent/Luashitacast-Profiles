@@ -117,7 +117,17 @@ local sets = T{
         Regen = T{
             Head = JSE.Artifact.Head,
             Legs = JSE.Relic.Legs
-        }
+        },
+		Temper = T{
+			Head=JSE.Empyrean.Head,
+			Neck = "Incanter's Torque",
+			Ear1 = "Andoaa Earring",
+			Hands = JSE.Artifact.Hands,
+			Ring1 = "Stikini Ring",
+			Ring2 = "Stikini Ring",
+			Waist = "Olympus Sash",
+			Legs = "Carmine Cuisses +1"
+		}
     },
     weaponskill = T{
         default = T{

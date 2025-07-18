@@ -1,6 +1,27 @@
 local smart = gFunc.LoadFile("Smart.lac/smart.lua")
-gFunc.LoadFile('common')
-if (not smart) or (not modes) then return nil end
+
+local JSE = T{
+	Artifact = T{
+		Head = "Drachen Armet",
+		Body = "Drachen Mail",
+		Hands = "Drachen Fng. Gnt.",
+		Legs = "Drachen Brais", 
+		Feet = "Drachen Greaves"
+	},
+	Relic = T{
+		Head = "Wyrm Armet",
+		Body = "Wyrm Mail",
+		Hands = "Wyrm Fng.Gnt.",
+		Legs = "Wyrm Brais",
+	},
+	Empyrean = T{
+		Head = "Lancer's Mezail",
+		Body = "Lncr. Plackart",
+		Hands = "Lancer's Vambraces",
+		Legs = "Lancer's Cuissots",
+		Feet = "Lncr. Schynbalds"
+	}
+}
 
 local sets = T{
     general = T{
@@ -51,11 +72,11 @@ local sets = T{
         }
     },
     lockstyle = T{
-        "Lancer's Mezail",
-        "Lncr. Plackart",
-        "Lancer's Vambraces",
-        "Lancer's Cuissots",
-        "Lncr. Schynbalds"
+		JSE.Empyrean.Head,
+		JSE.Empyrean.Body,
+		JSE.Empyrean.Hands,
+		JSE.Empyrean.Legs,
+		JSE.Empyrean.Feet
     }
 }
 

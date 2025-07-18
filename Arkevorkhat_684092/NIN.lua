@@ -20,7 +20,7 @@ local sets = T{
         Engaged = T{
             Ammo = "Date Shuriken",
             Head = 'Mpaca\'s Cap',
-            Neck = 'Iskur Gorget',
+            Neck = 'Moonbeam Nodowa',
             Ear1 = 'Cessance Earring',
             Ear2 = 'Telos Earring',
             Body = "Mpaca's Doublet",
@@ -66,6 +66,10 @@ local sets = T{
         ['Blade: Ten'] = T{
             Neck = "Rep. Plat. Medal"
         },
+		['Blade: Ei'] = T{
+			Head = "Pixie Hairpin +1",
+			Neck = "Rep. Plat. Medal"
+		},
         ---------------------------
         --   Other Weaponskills  --
         ---------------------------
@@ -77,11 +81,11 @@ local sets = T{
         default = T{
             Head = "Herculean Helm",
             Neck = "Voltsurge Torque",
+			Ear1 = "Loquac. Earring",
             Body = "Dread Jupon",
             Hands = "Leyline Gloves",
             Ring1 = "Prolix Ring",
             Ring2 = "Kishar Ring",
-            Ear1 = "Loquac. Earring"
         }
     },
     midcast = T{

@@ -11,7 +11,7 @@ local capes = T{
 local JSE = T{
     Artifact = T{
         Head = "",
-        Body = "Igno. Cuirass +2",
+        Body = "Ignominy Cuirass +2",
         Hands = "",
         Legs = "Igno. Flan. +1",
         Feet = ""
@@ -24,9 +24,9 @@ local JSE = T{
         Feet = ""
     },
     Empyrean = T{
-        Head = "",
-        Body = "",
-        Hands = "",
+        Head = "Bale Burgeonet",
+        Body = "Bale Cuirass",
+        Hands = "Bale Gauntlets",
         Legs = "Heath. Flanchard +2",
         Feet = "Heath. Sollerets +2"
     }
@@ -51,18 +51,18 @@ local sets = T{
         },
         Engaged = T{
             Ammo = "Coiste Bodhar",
-            Head = "Flam. Zucchetto +2",
+            Head = Ambuscade.Flamma.Head,
             Neck = "Abyssal Beads +1",
             Ear1 = "Telos Earring",
-            Ear2 = "Brutal Earring",
-            Body = "Sakpata's Plate",
-            Hands = "Sakpata's Gauntlets",
+            Ear2 = "Cessance Earring",
+            Body = Odyssey.Sakpata.Body,
+            Hands = Odyssey.Sakpata.Hands,
             Ring1 = "Niqmaddu Ring",
             Ring2 = "Ephramad's Ring",
             Back = capes.tp,
             Waist = "Sailfi Belt +1",
-            Legs = "Sakpata's Cuisses",
-            Feet = "Flam. Gambieras +2"
+            Legs = Odyssey.Sakpata.Legs,
+            Feet = Ambuscade.Flamma.Feet
         },
     },
     weaponskill = T{
@@ -72,7 +72,7 @@ local sets = T{
             Neck = "Fotia Gorget",
             Ear1 = "Moonshade Earring",
             Ear2 = "Ishvara Earring",
-            Body = JSE.Artifact.Chest,
+            Body = JSE.Artifact.Body,
             Hands = "Nyame Gauntlets",
             Ring1 = "Regal Ring",
             --Ring2 = "Cornelia's Ring",
@@ -81,6 +81,9 @@ local sets = T{
             Legs = "Nyame Flanchard",
             Feet = JSE.Empyrean.Feet
         },
+		['Shadow of Death'] = T{
+			Head = "Pixie Hairpin +1",
+		}
     },
     precast = T{
         default = T{
@@ -96,7 +99,7 @@ local sets = T{
             Feet = "Odyssean Greaves"
         },
         ["Dark Magic"] = T{
-            Head = "Fall. Burgeonet +1"
+            Head = JSE.Relic.Head
         }
     },
     midcast = T{
@@ -112,10 +115,10 @@ local sets = T{
         },
         buffs = T{
             ["Dark Seal"] = T{
-                Head = "Fall. Burgeonet +1"
+                Head = JSE.Relic.Head
             },
             ["Nether Void"] = T{
-                Legs = "Heath. Flanchard +2"
+                Legs = JSE.Empyrean.Legs
             }
         },
         ["Dark Magic"] = T{
@@ -131,15 +134,22 @@ local sets = T{
         }
     },
     lockstyle = T{
-        Head = "Terminal Helm",
-        Body = "Bale Cuirass",
-        Hands = "Bale Gauntlets",
-        Legs = "Heath. Flanchard +2",
-        Feet = "Heath. Sollerets +2"
+        Head = JSE.Empyrean.Head,
+        Body = JSE.Empyrean.Body,
+        Hands = JSE.Empyrean.Hands,
+        Legs = JSE.Empyrean.Legs,
+        Feet = JSE.Empyrean.Feet
     }
 }
 
 modes.enableWeaponGroups()
+modes.registerWeaponGroup('scythe', {
+	Main = "Agwu's Scythe",
+	Sub = Ambuscade.Weapon.Grip,
+	constraints = {
+		Constraint.HasSubjob('SAM')
+	}
+})
 modes.registerWeaponGroup('greatsword', {
     Main = "Agwu's Claymore",
     Sub = "Alber Strap",
@@ -148,13 +158,6 @@ modes.registerWeaponGroup('greatsword', {
     }
 })
 
-modes.registerWeaponGroup('scythe', {
-    Main = "Agwu's Scythe",
-    Sub = Ambuscade.Weapon.Grip,
-    constraints = {
-        Constraint.HasSubjob('SAM')
-    }
-})
 
 modes.registerWeaponGroup('Loxotic', {
     Main = "Loxotic Mace +1",
@@ -166,6 +169,15 @@ modes.registerWeaponGroup('Green Sword', {
 })
 
 modes.enableOverrideLayers()
+
+modes.registerOverride('Accuracy', T{
+	general = T{
+		Engaged = T{
+			Neck = "Null Loop",
+			Ring2 = "Ephramad's Ring",
+		}
+	}
+}, "Mid Accuracy")
 
 modes.registerOverride('DT', {
     general = T{

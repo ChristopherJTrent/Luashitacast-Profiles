@@ -1,3 +1,3 @@
 return {
-    disableUpdateCheck = false
+    disableUpdateCheck = false,
 }

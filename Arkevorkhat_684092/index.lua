@@ -5,8 +5,8 @@ return {
     ownedGorgets = T{
         ['Fotia Gorget'] = true
     },
-    imgui = T{
-        posX = 3250,
-        posY = 725
-    }
+	imgui = T{
+		posX = 1650,
+		posY = 600
+	}
 }
